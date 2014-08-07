@@ -1,0 +1,51 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Io
+scopeName: source.io
+fileTypes:
+- io
+uuid: ffc44989-eb67-43c1-af9b-b6547a75e83c
+
+patterns:
+- name: keyword.io
+  match: \b(clone|method|return)\b
+
+- name: keyword.control.io
+  match: \b(do|if|then|elseif|else|while|loop|repeat|for|ifTrue|ifFalse|foreach|map)\b
+
+- name: string.tripple.quoted.io
+  begin: "\"\"\""
+  end: "\"\"\""
+  beginCaptures:
+    "0":
+      name: punctuation.definition.string.begin.io
+  endCaptures:
+    "0":
+      name: punctuation.definition.string.end.io
+
+- name: string.double.quoted.io
+  begin: "\""
+  end: "\""
+  beginCaptures:
+    "0":
+      name: punctuation.definition.string.begin.io
+  endCaptures:
+    "0":
+      name: punctuation.definition.string.end.io
+  patterns:
+  - name: constant.character.escape.io
+    match: \\[nt\"]
+
+- name: constant.numeric.io
+  match: \b((0[xX][0-9a-fA-F]+)|[0-9]+|(([0-9]\.[0-9]+)|(\.[0-9]+))([eE](\+|-)?[0-9]+)?)\b
+
+- name: constant.language.io
+  match: \b(nil|true|false)\b
+
+- name: comment.cpp.io
+  match: //.*$
+- name: comment.sh.io
+  match: \#.*$
+- name: comment.c.io
+  begin: /\*
+  end: \*/
