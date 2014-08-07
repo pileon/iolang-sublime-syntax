@@ -12,7 +12,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>\b(clone|method)\b</string>
+			<string>\b(clone|method|return)\b</string>
 			<key>name</key>
 			<string>keyword.io</string>
 		</dict>
@@ -73,7 +73,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\\[nt\"]</string>
+					<string>\\[abnrtv\"]</string>
 					<key>name</key>
 					<string>constant.character.escape.io</string>
 				</dict>
