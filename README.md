@@ -1,5 +1,5 @@
-iolang-syntax
-=============
+iolang-sublime-syntax
+=====================
 
 [Sublime Text](http://sublimetext.com/) syntax definition for the [Io language](iolanguage.org/).
 
