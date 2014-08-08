@@ -68,12 +68,12 @@
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>string.double.quoted.io</string>
+			<string>string.single.quoted.io</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\\[abnrtv\"]</string>
+					<string>\\[abnrtv\"\\]</string>
 					<key>name</key>
 					<string>constant.character.escape.io</string>
 				</dict>
