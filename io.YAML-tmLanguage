@@ -47,5 +47,13 @@ patterns:
 - name: comment.sh.io
   match: \#.*$
 - name: comment.c.io
+  match: ^/\* =(\s*.*?)\s*= \*/$\n?
+  captures:
+    "1":
+      name: meta.toc-list.banner.block.c.io
+- name: comment.c.io
   begin: /\*
+  captures:
+    "0":
+      name: punctuation.definition.comment.c.io
   end: \*/
